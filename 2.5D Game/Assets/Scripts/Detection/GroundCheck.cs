@@ -14,11 +14,15 @@ public class GroundCheck : MonoBehaviour
 
         if (Physics.Raycast(playerPosition, Vector3.down, out RaycastHit hitInfo, checkDistance, groundLayer))
         {
-            isGrounded = true;
-        }
-        else if (hitInfo.collider.CompareTag("Crate"))
-        {
-            isGrounded = true;
+            if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground") || hitInfo.collider.CompareTag("Crate"))
+            {
+                isGrounded = true;
+            }
+            else
+            {
+                isGrounded = false;
+            }
+
         }
         else
         {
@@ -30,6 +34,6 @@ public class GroundCheck : MonoBehaviour
         Debug.DrawRay(playerPosition, Vector3.down * checkDistance, rayColor);
 
         //Debug messages to see what the ray is seeing
-        Debug.Log("Is Grounded: " + isGrounded);
+        //Debug.Log("Is Grounded: " + isGrounded);
     }
 }

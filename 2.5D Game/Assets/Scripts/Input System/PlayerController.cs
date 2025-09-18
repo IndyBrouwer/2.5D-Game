@@ -14,12 +14,14 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 5f;
 
     private GroundCheck GroundCheckScript;
+    private InteractableCheck InteractableCheckScript;
 
     private void Awake()
     {
         //Find rigidbody from player to move later
         playerRigidbody = GetComponent<Rigidbody>();
         GroundCheckScript = GetComponent<GroundCheck>();
+        InteractableCheckScript = GetComponent<InteractableCheck>();
 
         inputActions = new InputSystem_Actions();
     }
@@ -59,6 +61,15 @@ public class PlayerController : MonoBehaviour
             velocity.y = jumpForce;
             playerRigidbody.linearVelocity = velocity;
             GroundCheckScript.isGrounded = false;
+        }
+    }
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            //If player is standing in front of a ladder, enable climbing function
+            InteractableCheckScript.ClimbLadder();
         }
     }
 }

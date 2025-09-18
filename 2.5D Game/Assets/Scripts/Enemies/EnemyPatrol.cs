@@ -36,14 +36,14 @@ public class EnemyPatrol : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(wallCheck.position,direction, out hit, rayDistance, wallLayer) && hit.collider != null)
         {
-            Debug.Log("Wall detected: " + hit.collider.name);
-
             movingRight = !movingRight;
 
             // Flip the sprite
             Vector3 scale = transform.localScale;
             scale.x *= -1;
             transform.localScale = scale;
+
+            Debug.Log("Wall detected: " + hit.collider.name);
         }
     }    
 }
