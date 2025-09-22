@@ -5,8 +5,14 @@ public class DropItem : MonoBehaviour
     public GameObject itemDrop;
     public Transform dropPoint;
 
+    public bool itemDropped = false;
+
     public void ItemDrop()
     {
-        Instantiate(itemDrop, dropPoint.position, Quaternion.identity);
+        if (!itemDropped)
+        {
+            Instantiate(itemDrop, dropPoint.position, Quaternion.identity);
+            itemDropped = true;
+        }
     }
 }
