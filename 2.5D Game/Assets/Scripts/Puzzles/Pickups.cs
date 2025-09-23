@@ -10,7 +10,7 @@ public class Pickups : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("player"))
+        if (other.CompareTag("Player"))
         {
             Destroy(this.gameObject);
             gemImage.texture = GemCollected;
