@@ -1,19 +1,21 @@
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class Pickups : MonoBehaviour
 {
-    [SerializeField] private RawImage gemImage;
+    private UpdateUI UpdateUIscript;
 
-    [SerializeField] private Texture GemCollected;
-    [SerializeField] private Texture GemNotCollected;
+    private void Awake()
+    {
+        UpdateUIscript = FindFirstObjectByType<UpdateUI>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             Destroy(this.gameObject);
-            gemImage.texture = GemCollected;
+            UpdateUIscript.UpdateGemImage();
         }
     }
 }

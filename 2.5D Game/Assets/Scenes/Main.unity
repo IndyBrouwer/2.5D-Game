@@ -295,7 +295,6 @@ GameObject:
   - component: {fileID: 132132965}
   - component: {fileID: 132132967}
   - component: {fileID: 132132966}
-  - component: {fileID: 132132968}
   m_Layer: 5
   m_Name: Gem
   m_TagString: Untagged
@@ -360,61 +359,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132132964}
   m_CullTransparentMesh: 1
---- !u!212 &132132968
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132132964}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &155556753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 33e4e014072179146bcc1bceffcdbee6, type: 3}
@@ -5120,6 +5064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1992709321}
   - component: {fileID: 1992709322}
+  - component: {fileID: 1992709323}
   m_Layer: 0
   m_Name: ----  Scene Manager
   m_TagString: Untagged
@@ -5154,6 +5099,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce96ebaa79b81784a921093d686ca809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1992709323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992709320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404da0647ce5b8c47977e323aa153c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemImage: {fileID: 132132966}
+  GemCollected: {fileID: 21300000, guid: 6dc9e5b14b6e32f48a9fdf202d4209f7, type: 3}
+  GemNotCollected: {fileID: 21300000, guid: e2e7019133e18c34fb993025ac21618d, type: 3}
 --- !u!1001 &1993010834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5865,9 +5825,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8873484635388414289, guid: c0d381e0b9c361c41ba170c6b2cc60ef, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3736722569098086739}
-    - targetCorrespondingSourceObject: {fileID: 8873484635388414289, guid: c0d381e0b9c361c41ba170c6b2cc60ef, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3736722569098086741}
     - targetCorrespondingSourceObject: {fileID: 6670897267221739179, guid: c0d381e0b9c361c41ba170c6b2cc60ef, type: 3}
       insertIndex: -1
       addedObject: {fileID: 615861651}
@@ -6092,22 +6049,6 @@ CapsuleCollider:
   m_Height: 2.4140725
   m_Direction: 1
   m_Center: {x: 0, y: 1.1851218, z: 0}
---- !u!114 &3736722569098086741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3736722569098086730}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bc211fad39ebe54ca9c5ef703a5f782, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactableLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  climbSpeed: 3
 --- !u!1001 &4496446980183893971
 PrefabInstance:
   m_ObjectHideFlags: 0

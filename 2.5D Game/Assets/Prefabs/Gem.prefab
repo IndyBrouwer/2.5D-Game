@@ -77,7 +77,7 @@ PrefabInstance:
       addedObject: {fileID: 2763018997139655854}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cda4b2e3d0b7ffa40a3754dc88ea8d5d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4038243467794197312}
+      addedObject: {fileID: -5093624922271962709}
   m_SourcePrefab: {fileID: 100100000, guid: cda4b2e3d0b7ffa40a3754dc88ea8d5d, type: 3}
 --- !u!1 &2428921773534327928 stripped
 GameObject:
@@ -107,7 +107,7 @@ CapsuleCollider:
   m_Height: 0.74096376
   m_Direction: 1
   m_Center: {x: 0, y: 0.37048188, z: 0}
---- !u!114 &4038243467794197312
+--- !u!114 &-5093624922271962709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,5 +120,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gemImage: {fileID: 0}
-  GemCollected: {fileID: 2800000, guid: 6dc9e5b14b6e32f48a9fdf202d4209f7, type: 3}
-  GemNotCollected: {fileID: 2800000, guid: e2e7019133e18c34fb993025ac21618d, type: 3}
+  GemCollected: {fileID: 21300000, guid: 6dc9e5b14b6e32f48a9fdf202d4209f7, type: 3}
+  GemNotCollected: {fileID: 21300000, guid: e2e7019133e18c34fb993025ac21618d, type: 3}
