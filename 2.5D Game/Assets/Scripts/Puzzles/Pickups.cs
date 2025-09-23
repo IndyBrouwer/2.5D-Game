@@ -4,6 +4,7 @@ using UnityEngine;
 public class Pickups : MonoBehaviour
 {
     private UpdateUI UpdateUIscript;
+    private PlayerCelebrate playerScript;
 
     private void Awake()
     {
@@ -14,8 +15,12 @@ public class Pickups : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Destroy(this.gameObject);
             UpdateUIscript.UpdateGemImage();
+
+            playerScript = other.GetComponent<PlayerCelebrate>();
+            playerScript.Celebrate();
+
+            Destroy(this.gameObject);
         }
     }
 }

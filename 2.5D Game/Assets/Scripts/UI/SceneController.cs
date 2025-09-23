@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    private void FixedUpdate()
+    private void Awake()
     {
         Scene currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == "Win" || currentScene.name == "GameOver")
+        if (currentScene.name == "GameOver" || currentScene.name == "Win")
         {
             StartCoroutine(WaitSwitchScene(5f));
         }

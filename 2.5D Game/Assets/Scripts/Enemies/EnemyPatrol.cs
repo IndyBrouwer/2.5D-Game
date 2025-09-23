@@ -42,8 +42,6 @@ public class EnemyPatrol : MonoBehaviour
             Vector3 scale = transform.localScale;
             scale.x *= -1;
             transform.localScale = scale;
-
-            Debug.Log("Wall detected: " + hit.collider.name);
         }
     }    
 }

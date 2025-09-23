@@ -7,7 +7,7 @@ public class PressurePlates : MonoBehaviour
 
     public GameObject chestLid;
 
-    DropItem dropItemScript;
+    private DropItem dropItemScript;
 
     private void Awake()
     {
