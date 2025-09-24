@@ -6,8 +6,11 @@ public class PressurePlates : MonoBehaviour
     public bool SecondPressed = false;
 
     public GameObject chestLid;
+    [SerializeField] private AudioSource chestAudioSource;
+    [SerializeField] private AudioClip itemDroppedSound;
 
     private DropItem dropItemScript;
+    [SerializeField] private AudioController audioControllerScript;
 
     private void Awake()
     {
@@ -24,6 +27,9 @@ public class PressurePlates : MonoBehaviour
 
             //Call in the item drop function
             dropItemScript.ItemDrop();
+
+            //play audio
+            audioControllerScript.PlayChestAudio(itemDroppedSound);
         }
     }
 }

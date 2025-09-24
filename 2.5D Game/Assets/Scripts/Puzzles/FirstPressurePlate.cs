@@ -3,13 +3,14 @@ using UnityEngine;
 public class FirstPressurePlate : MonoBehaviour
 {
     public PressurePlates pressurePlatesScript;
-    public GameObject plateVisual;
+    [SerializeField] private GameObject redButton;
 
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             pressurePlatesScript.FirstPressed = true;
+            redButton.SetActive(false);
         }
     }
 
@@ -18,6 +19,7 @@ public class FirstPressurePlate : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             pressurePlatesScript.FirstPressed = false;
+            redButton.SetActive(true);
         }
     }
 }
