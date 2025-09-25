@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GroundCheck : MonoBehaviour
 {
     [Header("Ground Check Settings")]
     public LayerMask groundLayer;
+    public LayerMask waterLayer;    
 
     public bool isGrounded = false;
     private float checkDistance = 0.1f;
@@ -23,6 +25,13 @@ public class GroundCheck : MonoBehaviour
                 isGrounded = false;
             }
 
+        }
+        else if (Physics.Raycast(playerPosition, Vector3.down, out hitInfo, checkDistance, waterLayer))
+        {
+            if (hitInfo.collider.CompareTag("Water"))
+            {
+                SceneManager.LoadScene("GameOver");
+            }
         }
         else
         {

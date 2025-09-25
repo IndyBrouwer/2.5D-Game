@@ -370,8 +370,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293050289
-  m_fontColor: {r: 0.69411767, g: 0.7490196, b: 0.8862745, a: 1}
+    rgba: 4290427292
+  m_fontColor: {r: 0.6117647, g: 0.7254902, b: 0.7294118, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -506,8 +506,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293050289
-  m_fontColor: {r: 0.69411767, g: 0.7490196, b: 0.8862745, a: 1}
+    rgba: 4290427292
+  m_fontColor: {r: 0.6117647, g: 0.7254902, b: 0.7294118, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -775,8 +775,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293050289
-  m_fontColor: {r: 0.69411767, g: 0.7490196, b: 0.8862745, a: 1}
+    rgba: 4290427292
+  m_fontColor: {r: 0.6117647, g: 0.7254902, b: 0.7294118, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1545,7 +1545,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.6946998, g: 0.7490196, b: 0.8867924, a: 0}
+  m_BackGroundColor: {r: 0.6117647, g: 0.7254902, b: 0.7294118, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

@@ -8,6 +8,7 @@ TagManager:
   - Crate
   - Ladder
   - Gem
+  - Water
   layers:
   - Default
   - TransparentFX
