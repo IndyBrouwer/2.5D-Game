@@ -23,4 +23,10 @@ public class AudioController : MonoBehaviour
         audioSource.clip = chestAudio;
         audioSource.Play();
     }
+
+    public void PlayTimerAudio(AudioClip timerAudio)
+    {
+        audioSource.clip = timerAudio;
+        audioSource.Play();
+    }
 }

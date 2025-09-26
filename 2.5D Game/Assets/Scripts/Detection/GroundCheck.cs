@@ -43,6 +43,6 @@ public class GroundCheck : MonoBehaviour
         Debug.DrawRay(playerPosition, Vector3.down * checkDistance, rayColor);
 
         //Debug messages to see what the ray is seeing
-        //Debug.Log("Is Grounded: " + isGrounded);
+       Debug.Log("Is Grounded: " + isGrounded);
     }
 }
